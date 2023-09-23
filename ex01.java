@@ -2,7 +2,7 @@ package Home_work02;
 
 import java.io.*;
 
-public class Program {
+public class ex01 {
     public static void main(String[] args) {
         InputStream inputStream;
         try {
