@@ -33,7 +33,7 @@ public class UserDataParser {
             // Проверка формата данных
             try {
                 validateDataFormat(birthDate, phoneNumber, gender);
-            } catch (Home_work03.InvalidDataFormatException e) {
+            } catch (Home_work02.InvalidDataFormatException e) {
                 System.out.println("Ошибка: " + e.getMessage());
                 return;
             }
@@ -56,20 +56,20 @@ public class UserDataParser {
     }
 
     private static void validateDataFormat(String birthDate, String phoneNumber, String gender)
-            throws Home_work03.InvalidDataFormatException {
+            throws Home_work02.InvalidDataFormatException {
         // Проверка формата даты рождения
         if (!birthDate.matches("\\d{2}\\.\\d{2}\\.\\d{4}")) {
-            throw new Home_work03.InvalidDataFormatException("Неверный формат даты рождения. Используйте dd.mm.yyyy.");
+            throw new Home_work02.InvalidDataFormatException("Неверный формат даты рождения. Используйте dd.mm.yyyy.");
         }
 
         // Проверка формата номера телефона
         if (!phoneNumber.matches("\\d+")) {
-            throw new Home_work03.InvalidDataFormatException("Неверный формат номера телефона. Используйте целое число без пробелов.");
+            throw new Home_work02.InvalidDataFormatException("Неверный формат номера телефона. Используйте целое число без пробелов.");
         }
 
         // Проверка формата пола
         if (!gender.matches("[fm]")) {
-            throw new Home_work03.InvalidDataFormatException("Неверный формат пола. Используйте 'f' или 'm'.");
+            throw new Home_work02.InvalidDataFormatException("Неверный формат пола. Используйте 'f' или 'm'.");
         }
     }
 }
